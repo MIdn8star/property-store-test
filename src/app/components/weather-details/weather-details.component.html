@@ -1,0 +1,68 @@
+<div class="mt-3" *ngIf="details">
+  <div class="custom-card-2" >
+    <h3>{{counter}}</h3>
+
+    <div class="d-flex justify-content-between">
+      <h5 class="font-color">Weather Details</h5>
+      <div><img class="flag" [src]="'/assets/flags/' + details.sys.country + '.png'" alt=""></div>
+    </div>
+
+    <hr>
+
+    <div class="row" >
+      <div class="col">
+        <div>
+          <h2>{{details.main.temp}}°C</h2>
+        </div>
+        <div><h6 class="font-grey">Feels like {{details.main.feels_like}}°C</h6></div>
+      </div>
+
+      <div class="col">
+        <div>
+          <h6>
+            <span>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg"
+                   viewBox="0 0 24 24"><title>thermometer-chevron-up</title><path
+                d="M17.41 11.83L20.58 15L22 13.59L17.41 9L12.82 13.59L14.24 15L17.41 11.83M10 13V5C10 3.34 8.66 2 7 2S4 3.34 4 5V13C1.79 14.66 1.34 17.79 3 20S7.79 22.66 10 21 12.66 16.21 11 14C10.72 13.62 10.38 13.28 10 13M7 4C7.55 4 8 4.45 8 5V8H6V5C6 4.45 6.45 4 7 4Z"/></svg>
+          </span>
+
+            Max Temp. : {{details.main.temp_max}}°C
+          </h6>
+        </div>
+        <div>
+          <h6>
+            <span>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>thermometer-chevron-down</title><path
+                d="M17.41 12.17L14.24 9L12.83 10.41L17.41 15L22 10.41L20.58 9M10 13V5C10 3.34 8.66 2 7 2S4 3.34 4 5V13C1.79 14.66 1.34 17.79 3 20S7.79 22.66 10 21 12.66 16.21 11 14C10.72 13.62 10.38 13.28 10 13M7 4C7.55 4 8 4.45 8 5V8H6V5C6 4.45 6.45 4 7 4Z"/></svg>
+          </span>
+
+            Min Temp :  {{details.main.temp_min}}°C
+          </h6>
+        </div>
+        <div>
+          <h6>
+                      <span>
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>water-percent</title><path
+                          d="M12,3.25C12,3.25 6,10 6,14C6,17.32 8.69,20 12,20A6,6 0 0,0 18,14C18,10 12,3.25 12,3.25M14.47,9.97L15.53,11.03L9.53,17.03L8.47,15.97M9.75,10A1.25,1.25 0 0,1 11,11.25A1.25,1.25 0 0,1 9.75,12.5A1.25,1.25 0 0,1 8.5,11.25A1.25,1.25 0 0,1 9.75,10M14.25,14.5A1.25,1.25 0 0,1 15.5,15.75A1.25,1.25 0 0,1 14.25,17A1.25,1.25 0 0,1 13,15.75A1.25,1.25 0 0,1 14.25,14.5Z"/></svg>
+          </span>
+
+
+            Humidity :  {{details.main.humidity}}%
+          </h6>
+        </div>
+        <div>
+          <h6>
+                      <span>
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>eye</title><path
+                          d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"/></svg>
+          </span>
+
+            Visibility :  {{details.visibility / 1000}}KM
+          </h6>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

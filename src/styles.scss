@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+
+.custom-card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.custom-card-2 {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.icon {
+  height: 18px;
+  width: 18px;
+}
+
+.font-color {
+  color: #010c80;
+}
+
+.primary-bg-color {
+  background-color: #010c80 !important;
+
+}
+
+.t-right{
+  text-align: right;
+}
+.font-grey {
+  color: grey;
+}
+
+
+.flag {
+  height: 48px;
+  width: 48px;
+}
+
+.required-star {
+  color: #f00 !important;
+  margin-left: 3px;
+  display: inline-block;
+}
+
+
+.error {
+  color: red;
+}

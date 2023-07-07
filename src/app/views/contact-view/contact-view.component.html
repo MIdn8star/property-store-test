@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="custom-card-2 mt-5">
+    <h4 class="font-color">Contact Us</h4>
+    <hr>
+    <div>
+      <div [formGroup]="contactUs">
+        <div class="row">
+          <div class="col-md-6">
+            <label class="form-label">Name
+              <span class="required-star">*</span>
+
+            </label>
+            <input class="form-control" formControlName="name" type="text">
+            <div class="msg-color" *ngIf="contactUs.controls.name.errors && formSubmitted==true">
+        <span class="error">
+          Please enter valid name</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Email
+              <span class="required-star">*</span>
+
+            </label>
+            <input class="form-control" formControlName="email" type="text">
+            <div class="msg-color" *ngIf="contactUs.controls.name.errors && formSubmitted==true">
+        <span class="error">
+          Please enter valid email</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-6">
+            <label class="form-label">Mobile
+              <span class="required-star">*</span>
+
+            </label>
+            <input class="form-control" formControlName="mobile" type="text">
+            <div class="msg-color" *ngIf="contactUs.controls.name.errors && formSubmitted==true">
+        <span class="error">
+          Please enter valid mobile</span>
+            </div>
+
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Purpose
+              <span class="required-star">*</span>
+
+            </label>
+
+            <select formControlName="purpose" class="form-select" aria-label="Default select example">
+              <option selected>Select purpose</option>
+              <option value="1">Business</option>
+              <option value="2">Query</option>
+              <option value="3">Raise issue</option>
+            </select>
+            <div class="msg-color" *ngIf="contactUs.controls.name.errors && formSubmitted==true">
+        <span class="error">
+          Please choose purpose</span>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="row mt-2">
+          <div class="col">
+            <label class="form-label">Message
+              <span class="required-star">*</span>
+
+            </label>
+
+            <textarea formControlName="message" class="form-control" rows="3"></textarea>
+            <div class="msg-color" *ngIf="contactUs.controls.name.errors && formSubmitted==true">
+        <span class="error">
+          Please enter valid message</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="mt-2 t-right">
+          <button class="btn btn-primary primary-bg-color" (click)="submitContact()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
