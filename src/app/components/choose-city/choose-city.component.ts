@@ -37,6 +37,10 @@ export class ChooseCityComponent implements OnInit {
 
   }
 
+  /**
+   * Function to select city for weather details and output the selected city to parent home component
+   * @param city selected city unique code
+   */
 
   selectCity(city: string) {
     let cityLocation = AppConstants.LONDON_LOCATION;

@@ -21,6 +21,10 @@ export class WeatherDetailsComponent implements OnInit {
 
   details: any
 
+  /**
+   * Subsribe to the changes in seletec city coming from parent component and show weather accordingly
+   */
+
   ngOnInit(): void {
     this.city.subscribe((data: any) => {
       console.log('city data changed', data);

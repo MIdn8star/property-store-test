@@ -23,6 +23,11 @@ export class ContactViewComponent {
   constructor(private formBuilder: FormBuilder, private toastr: ToastrService, private store: Store) {
   }
 
+
+  /**
+   * function to submit the contact for after checking validations and reset it
+   */
+
   submitContact() {
     if (this.contactUs.valid) {
       this.toastr.success('success');

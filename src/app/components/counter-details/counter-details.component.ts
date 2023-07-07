@@ -7,13 +7,16 @@ import {Store} from "@ngrx/store";
   styleUrls: ['./counter-details.component.scss']
 })
 export class CounterDetailsComponent implements OnInit {
-  counter =0;
+  counter = 0;
 
   constructor(private store: Store<{ counter: { counter: number } }>) {
 
   }
 
   ngOnInit(): void {
+
+    // Get the counter details on change using ngrx store
+
     this.store.select('counter').subscribe(data => {
       console.log('this is data', data)
       this.counter = data.counter
